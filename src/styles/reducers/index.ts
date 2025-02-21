@@ -1,6 +1,6 @@
-// src/styles/index.ts
 import { combineReducers } from 'redux'
-import someReducer from '../reducers/someReducer'
+import someReducer from './someReducer' // Caminho correto para o 'someReducer'
+
 const rootReducer = combineReducers({
   someState: someReducer,
 })
