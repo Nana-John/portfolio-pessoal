@@ -1,21 +1,12 @@
-// redux/reducers/userReducer.ts
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
-// Definição do tipo do estado do usuário
-interface UserState {
-  name: string
-  email: string
-  isAuthenticated: boolean
-}
-
-// Estado inicial
-const initialState: UserState = {
+// Definição do estado inicial
+const initialState = {
   name: '',
   email: '',
   isAuthenticated: false,
 }
 
-// Criando o reducer usando createSlice
 const userSlice = createSlice({
   name: 'user',
   initialState,

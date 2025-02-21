@@ -9,5 +9,10 @@
     "quotes": ["error", "single"], // Usa aspas simples
     "no-unused-vars": "warn", // Mostra aviso para variáveis não usadas
     "react/prop-types": "off" // Desativa verificação de prop-types no React
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
