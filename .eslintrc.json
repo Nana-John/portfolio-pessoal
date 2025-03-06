@@ -8,7 +8,8 @@
     "semi": ["error", "never"], // Remove ponto e vírgula
     "quotes": ["error", "single"], // Usa aspas simples
     "no-unused-vars": "warn", // Mostra aviso para variáveis não usadas
-    "react/prop-types": "off" // Desativa verificação de prop-types no React
+    "react/prop-types": "off", // Desativa verificação de prop-types no React
+    "react/react-in-jsx-scope": "off"
   },
   "settings": {
     "react": {

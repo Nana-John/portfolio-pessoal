@@ -1,27 +1,15 @@
 import React from 'react'
-import { GlobalStyles } from './styles/GlobalStyles'
-import Home from './pages/Home'
-import Header from './../src/components/Header'
-import Hero from './../src/components/Hero'
-import About from './../src/components/About'
-import Portfolio from './../src/components/Portfolio'
-import Services from './../src/components/Services'
-import Testimonials from './../src/components/Testimonials'
-import Contact from './../src/components/Contact'
+import { ThemeProvider } from 'styled-components'
+import { theme } from './theme' // Certifique-se de que o caminho está correto
+import Hero from './components/Hero' // Certifique-se de que o caminho está correto
+import { MyComponent } from '../src/components/components/MyComponent' // Ajuste o caminho conforme necessário
 
 const App: React.FC = () => {
   return (
-    <>
-      <GlobalStyles />
-      <Header />
-      <Hero />
-      <About />
-      <Portfolio />
-      <Services />
-      <Testimonials />
-      <Contact />
-      <Home />
-    </>
+    <ThemeProvider theme={theme}>
+      <Hero /> {/* Corrigido para a sintaxe de auto fechamento */}
+      <MyComponent />
+    </ThemeProvider>
   )
 }
 

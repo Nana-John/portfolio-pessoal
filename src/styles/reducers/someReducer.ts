@@ -1,30 +1,29 @@
+// src/redux/someReducers.ts
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
-// Definindo o tipo corretamente
+// Definindo o tipo para o estado
 interface SomeState {
-  value: number
+  exampleField: string // A propriedade exampleField deve ser definida aqui
 }
 
+// Estado inicial
 const initialState: SomeState = {
-  value: 0,
+  exampleField: '', // Valor inicial da propriedade exampleField
 }
 
+// Criando o slice do Redux
 const someSlice = createSlice({
   name: 'someState',
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1
-    },
-    decrement: (state) => {
-      state.value -= 1
-    },
-    setValue: (state, action: PayloadAction<number>) => {
-      state.value = action.payload
+    updateExampleField(state, action: PayloadAction<string>) {
+      state.exampleField = action.payload // Atualizando o exampleField no estado
     },
   },
 })
 
-// Exportando as ações e o reducer
-export const { increment, decrement, setValue } = someSlice.actions
+// Exportando as ações do slice
+export const { updateExampleField } = someSlice.actions
+
+// Exportando o reducer
 export default someSlice.reducer
